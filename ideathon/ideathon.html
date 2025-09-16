@@ -1,0 +1,516 @@
+<html>
+<head>
+  <title> IT Dept Ideathon — Domains & Registration</title>
+<link rel="icon" type="image/jpg" href="logo.jpg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVn9lRk5P3MwFrQpzULrP+59Rby+S1UdMQXwYt0Gn+4kFk0aR7LwT4x4U+Kknp3yS+bAapvP/TU8O0VzD1DJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --glass-bg: rgba(255,255,255,0.06);
+      --glass-border: rgba(255,255,255,0.12);
+    }
+    body{
+      font-family: 'Poppins', Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      background: linear-gradient(180deg, rgba(10,14,30,0.6), rgba(5,7,20,0.6)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&q=60&w=1600&fit=crop') center/cover no-repeat fixed;
+      min-height:100vh;
+      color: #e6eef8;
+    }
+    .watermark::after{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('https://via.placeholder.com/600x600.png?text=DEPT+LOGO') center/contain no-repeat;
+      opacity: 0.06;
+      mix-blend-mode: overlay;
+      pointer-events: none;
+      transform: scale(1.2);
+      filter: blur(0.5px);
+    }
+    .glass {
+      background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(20px) saturate(150%);
+      -webkit-backdrop-filter: blur(8px) saturate(120%);
+      border-radius: 14px;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px) scale(.995);
+      transition: all 600ms cubic-bezier(.2,.9,.2,1);
+      will-change: transform, opacity;
+    }
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    .domain-card:hover{
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(30,40,60,0.45);
+    }
+    .domain-card{
+      transition: transform 250ms ease, box-shadow 250ms ease;
+    }
+    .modal-backdrop{
+      background: linear-gradient(180deg, rgba(2,6,23,0.6), rgba(8,12,30,0.8));
+      backdrop-filter: blur(6px);
+    }
+    .nav-glass{
+      background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      backdrop-filter: blur(6px);
+    }
+
+    @media (max-width: 768px){
+      .hide-sm { display:none; }
+    }
+  </style>
+</head>
+<body class="watermark">
+  <header class="fixed w-full top-0 z-40">
+    <nav class="nav-glass glass px-6 py-3 max-w-7xl mx-auto flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <img src="logo.jpg" alt="dept logo" class="w-10 h-10 rounded-full object-cover">
+        <div>
+          <h1 class="text-white font-semibold">Ideathon</h1>
+          <p class="text-xs text-slate-300 -mt-1">Innovation • Solve • Deploy</p>
+        </div>
+      </a>
+      <div class="flex items-center gap-6">
+        <ul class="hidden md:flex items-center gap-6 text-slate-200">
+          <li><a class="hover:underline" href="#home">Home</a></li>
+          <li><a class="hover:underline" href="#domains">Domains</a></li>
+          <li><a class="hover:underline" href="#contact">Contact</a></li>
+        </ul>
+        <a href="#register" class="ml-2 px-4 py-2 bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-lg text-black font-semibold shadow-lg hover:scale-105 transition-transform">Register</a>
+      </div>
+    </nav>
+  </header>
+  <main class="pt-28 max-w-7xl mx-auto px-6 pb-16">
+    <section id="home" class="reveal p-8 rounded-2xl glass border border-white/5 overflow-hidden relative">
+      <div class="grid md:grid-cols-2 gap-6 items-center">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-bold leading-tight">Deparment of IT  Ideathon 2025</h2>
+          <p class="mt-4 text-slate-200 max-w-xl">Bring your team, pick a domain, and build solutions to real-world problem statements. Explore domains, view problem statements, and register your team below.</p>
+
+          <div class="mt-6 flex gap-3">
+            <a href="#domains" class="px-5 py-3 rounded-lg bg-gradient-to-r from-violet-500 to-cyan-400 font-semibold text-black shadow hover:opacity-95">Explore Domains</a>
+            <a href="#register" class="px-5 py-3 rounded-lg border border-white/10 text-white">Register</a>
+          </div>
+          <div class="mt-6 text-sm text-slate-300">
+            <!--<strong>Note:</strong> Problem statements are taken from the provided Ideathon problem-statement document.-->
+          </div>
+        </div>
+        <div class="relative">
+          <div class="glass p-6 rounded-xl">
+            <div class="h-64 md:h-72 rounded-lg overflow-hidden border border-white/6">
+              <img src="side.jpg" alt="coding" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-4 flex justify-between items-center">
+              <div>
+                <h3 class="font-semibold">Quick Info</h3>
+                <p class="text-sm text-slate-300">Eligibility: 3<sup>rd</sup> & 4<sup>th</sup> Year students</p>
+              </div>
+              <div class="text-right">
+                <p class="font-bold text-xl">4 Members per Team</p>
+                <p class="text-xs text-slate-300">Include leader + 3 members</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="domains" class="mt-10">
+      <h2 class="text-2xl font-semibold mb-4">Domains</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      </div>
+    </section>
+    <div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center p-6">
+      <div class="absolute inset-0 modal-backdrop opacity-95" onclick="closeModal()"></div>
+      <div class="relative max-w-3xl w-full glass p-6 rounded-xl z-50 overflow-y-auto max-h-[80vh]">
+        <button class="absolute top-4 right-4 p-2 rounded-full hover:bg-white/5" onclick="closeModal()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M6 18L18 6" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+<section id="register" class="mt-12 flex justify-center">
+</section>
+<div id="register-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-6">
+  <div class="absolute inset-0 modal-backdrop opacity-95" onclick="closeRegisterModal()"></div>
+  <div class="relative max-w-5xl w-full glass p-6 rounded-xl z-50 overflow-y-auto max-h-[90vh]">
+    <button class="absolute top-4 right-4 p-2 rounded-full hover:bg-white/5" onclick="closeRegisterModal()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6L18 18M6 18L18 6" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <h3 class="text-xl font-semibold text-center mb-2">Team Registration</h3>
+    <p class="text-sm text-slate-300 mb-4 text-center">Fill your team details and select the problem statement from the domain list.</p>
+
+    <div class="glass p-4 rounded-md border border-white/6 w-full">
+      <p class="text-xs text-slate-300 text-center">Fill Your Team details in the given Google Form to Register for the event.</p>
+      <div class="mt-3">
+        <iframe
+          src="https://forms.gle/moPM5uTuBj1jxJN37"
+          class="w-full h-[560px] border-0"
+          loading="lazy"
+        >Loading…</iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="guidelines" class="mt-12 glass p-6 rounded-xl reveal">
+  <h2 class="text-2xl font-semibold mb-6 text-center">Rules & Guidelines</h2>
+
+  <div class="mb-8">
+    <h3 class="text-xl font-semibold text-blue-400 mb-3">📌 Ideathon Rules & Restrictions</h3>
+    <ul class="list-disc pl-5 space-y-2 text-slate-300 text-sm">
+      <li>Teams must have 4 members (only 3<sup>rd</sup> & 4<sup>th</sup> year IT students).</li>
+      <li>Each student can join only in one team.</li>
+      <li>Ideas must relate to the given domains/problem statements.</li>
+      <li>No plagiarism – solutions must be original and developed during the event.</li>
+      <li>Use of open-source tools and free APIs is encouraged.</li>
+      <li>Teams must submit a 1-page abstract before development starts.</li>
+      <li>Final submission must include:
+        <ul class="list-disc pl-6 mt-1 space-y-1">
+          <li>Working demo/prototype</li>
+          <li>Presentation slides</li>
+          <li>Source code/documentation</li>
+        </ul>
+      </li>
+      <li>Total pitching time per will be 10 mins(including Q&A).</li>
+      <li>Code/solution sharing between teams is prohibited.</li>
+      <li>Violation of rules leads to disqualification.</li>
+    </ul>
+  </div>
+
+  <!-- Subsection: Do's & Don'ts -->
+  <div>
+    <h3 class="text-xl font-semibold text-purple-400 mb-3">⚖ Do’s & Don’ts</h3>
+    <div class="grid md:grid-cols-2 gap-6 text-sm text-slate-300">
+      
+      <!-- Do’s -->
+      <div>
+        <h4 class="font-semibold text-green-400 mb-2">✅ Do’s</h4>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Form teams of 4 members from 3<sup>rd</sup> & 4<sup>th</sup> year IT.</li>
+          <li>Stick to the given domains/problem statements.</li>
+          <li>Use open-source tools, free APIs, and frameworks.</li>
+          <li>Submit a 1-page abstract before coding.</li>
+          <li>Practice time management to finish within the event schedule.</li>
+          <li>Acknowledge any third-party libraries or resources used.</li>
+        </ul>
+      </div>
+
+      <!-- Don’ts -->
+      <div>
+        <h4 class="font-semibold text-red-400 mb-2">❌ Don’ts</h4>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Don’t plagiarize or copy existing projects directly.</li>         
+          <li>Don’t work on offensive, unethical, or illegal ideas.</li>
+          <li>Don’t share code/solutions between teams.</li>
+          <li>Don’t exceed the presentation time limit (5–10 minutes).</li>
+          <li>Don’t submit incomplete work without a demo/prototype.</li>    
+          <li>Don’t rely solely on AI tools — the core idea must be yours.</li>
+          <li>Don’t miss deadlines for abstract or final submission.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <p class="mt-6 text-xs text-slate-400 text-center">
+    ⚠ Non-compliance with these rules may lead to disqualification.
+  </p>
+</section>
+
+
+    <!-- CONTACT / FOOTER -->
+    <footer id="contact" class="mt-12 glass p-6 rounded-xl reveal">
+      <div class="flex flex-col md:flex-row md:justify-between gap-6">
+        <div>
+          <h4 class="font-semibold text-lg">Department of Information Technology</h4>
+          <p class="text-sm text-slate-300 mt-2">Saranathan College Of Engineering<br/>Panjappur,Trichy</p>
+           <p class="mt-2 text-sm text-slate-300"><strong>email:</strong>doitclub@gmail.com</p>
+         <ul class="mt-2 text-sm text-slate-300 space-y-1">
+  <li>
+    <strong>Student Coordinator:</strong> Kavin | 
+    <strong>email:</strong> <a href="mailto:kavinanimation0405@gmail.com" class="underline">kavinanimation0405@gmail.com</a> | 
+    <strong>Ph:</strong> <a href="tel:+919159040656" class="underline">+91 91590 40656</a>
+  </li>
+  <li>
+    <strong>Student Coordinator:</strong> Varshni | 
+    <strong>email:</strong> <a href="mailto:varshnithiyagarajan@gmail.com" class="underline">varshnithiyagarajan@gmail.com</a> | 
+    <strong>Ph:</strong> <a href="tel:+919003711342" class="underline">+91 90037 11342</a>
+  </li>
+</ul>
+<!-- LinkedIn 
+          <div class="mt-4 flex gap-3">
+<a aria-label="whatsapp" class="p-2 rounded-md hover:bg-white/5" href="https://wa.me/9159040656" target="_blank">
+  <i class="fab fa-whatsapp fa-lg"></i>
+</a>
+
+
+<a aria-label="linkedin" class="p-2 rounded-md hover:bg-red/5" href="" target="_blank">
+  <i class="fab fa-linkedin fa-lg"></i>
+</a>
+
+
+
+          </div>-->
+        </div>
+
+        <div class="text-sm text-slate-300">
+          <h5 class="font-semibold">Important Links</h5>
+          <ul class="mt-2 space-y-1">
+            <li><a href="#domains" class="hover:underline">Domains & Problem Statements</a></li>
+            <li><a href="#register" class="hover:underline">Register Team</a></li>
+            <li><a href="#guidelines" class="hover:underline">Rules & Guidelines</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-6 text-xs text-slate-400 text-center">© 2025 Department Of IT Ideathon</div>
+     <div class="mt-6 text-xs text-white text-center"><strong>😎Developed By BSS😎</strong></div>
+
+    </footer>
+
+  </main>
+
+  <!-- JS: domains, modal, reveal, populate problem select, smooth scroll -->
+  <script>
+    const data = [
+  {
+    id: 'health',
+    title: 'Healthcare & Life Sciences',
+    problems: [
+      { problemId:'health101', title:'Empowering Traveling Doctors with AI', desc:'A mobile-first platform for doctors to record/retrieve patient data offline and sync online. AI/ML predicts disease progression and highlights high-risk patients.', expectedOutcome:'Prototype app with offline data entry, cloud sync, and AI module predicting disease progression for at least 3 common cases.' },
+      { problemId:'health102', title:'Health Services & Outcome Monitoring', desc:'Digital system to record treatments, send reminders via SMS/app, collect feedback, and provide outcome dashboards for doctors.', expectedOutcome:'Functional dashboard with treatment logs, automated SMS/app reminders, and adherence visualization.' },
+      { problemId:'health103', title:'IoT-Based Remote Patient Monitoring', desc:'Wearable IoT sensors measuring vitals and sending them to cloud dashboards with anomaly alerts and historical data access.', expectedOutcome:'Working prototype using IoT sensor data, live dashboard, and anomaly alert notifications.' },
+      { problemId:'health104', title:'Multi-Agent Workflow for Patient Diagnostics', desc:'Digital platform automating workflows between labs, radiology, and doctors with AI-driven scheduling and patient updates.', expectedOutcome:'Workflow prototype showing lab → radiology → doctor integration with AI scheduling to reduce turnaround time.' },
+      { problemId:'health105', title:'Smart Community Health Monitoring & Early Warning System', desc:'AI/ML-powered system integrating clinic and environmental data to detect disease outbreaks and issue real-time alerts.', expectedOutcome:'System that detects anomalies in community health data, generates alerts, and visualizes outbreak trends.' }
+    ]
+  },
+  {
+    id: 'agri',
+    title: 'Agriculture & Food Security',
+    problems: [
+      { problemId:'agri101', title:'Waste-to-Value in Agriculture', desc:'Platform for farmers to list surplus produce for buyers, processors, or charities, reducing food waste.', expectedOutcome:'Web platform for farmers to list surplus produce and buyers to connect with transparent communication features.' },
+      { problemId:'agri102', title:'Supply Chain Transparency', desc:'Blockchain-based system to trace and verify product journeys, ensuring consumer trust in agriculture supply chains.', expectedOutcome:'Blockchain prototype recording product journey and consumer interface to verify source and authenticity.' },
+      { problemId:'agri103', title:'Automated Post-Harvest Quality Assessment', desc:'Computer vision prototype grading produce instantly, detecting defects, and providing quality scores.', expectedOutcome:'CV model grading at least 2 types of produce with accuracy above 80% and real-time scoring.' },
+      { problemId:'agri104', title:'AI-Driven Crop Yield Prediction', desc:'ML model using soil, weather, and satellite data to forecast yields with confidence scores.', expectedOutcome:'Predictive model giving yield forecasts for at least one crop with confidence intervals and visual dashboard.' },
+      { problemId:'agri105', title:'Automated Pest and Disease Identification', desc:'Mobile app using computer vision to detect crop diseases/pests from images and suggest treatments.', expectedOutcome:'App prototype allowing farmers to upload plant images and get instant pest/disease detection with treatment suggestions.' }
+    ]
+  },
+  {
+    id: 'edu',
+    title: 'Education & Learning',
+    problems: [
+      { problemId:'edu101', title:'Alumni Connect and Mentorship Portal', desc:'Portal enabling alumni-student mentorship, internships, and career guidance for stronger engagement.', expectedOutcome:'Working portal with alumni registration, student mentorship requests, and interaction tracking.' },
+      { problemId:'edu102', title:'AI-Driven Student Dropout Prediction System', desc:'Predictive analytics to identify at-risk students early, enabling proactive interventions.', expectedOutcome:'Model identifying dropout risk from student academic/financial data with visual alerts for institutions.' },
+      { problemId:'edu103', title:'AI-Powered Resume Analyzer and Job Matching', desc:'AI tool that analyzes resumes, suggests improvements, and matches candidates with relevant jobs.', expectedOutcome:'Functional system parsing resumes, suggesting skill improvements, and matching with at least 5 sample job postings.' },
+      { problemId:'edu104', title:'Gamified Learning Application for Differently-Abled Students', desc:'Accessible mobile app with gamified features tailored for differently-abled students to improve learning outcomes.', expectedOutcome:'App prototype with 2–3 gamified learning modules, accessibility features, and student progress tracking.' },
+      { problemId:'edu105', title:'Smart Timetable and Resource Optimization', desc:'AI-based timetable generator optimizing classroom resources and reducing conflicts dynamically.', expectedOutcome:'System generating conflict-free timetables dynamically and allowing updates in case of resource changes.' }
+    ]
+  },
+  {
+    id: 'retail',
+    title: 'Retail & E-commerce',
+    problems: [
+      { problemId:'retail101', title:'Hyper-Personalized E-Commerce Platform', desc:'AI-powered shopping platform recommending products based on behavior, preferences, and virtual try-ons.', expectedOutcome:'Prototype website/app showing personalized product feeds, curated lists, and try-on feature demo.' },
+      { problemId:'retail102', title:'Dynamic Pricing & Inventory Management System', desc:'Real-time system adjusting product prices based on demand, competition, and inventory levels.', expectedOutcome:'Dashboard showing automated pricing updates and inventory tracking in real-time.' },
+      { problemId:'retail103', title:'Local Event Discovery & Booking App', desc:'App/web platform listing nearby events with booking and recommendation features.', expectedOutcome:'Mobile/web app listing events with filters, booking functionality, and personalized event suggestions.' },
+      { problemId:'retail104', title:'Community Help & Volunteer Platform', desc:'Web app connecting people in need with volunteers, with trust metrics and notifications.', expectedOutcome:'Platform where users can post requests, volunteers can accept them, and a feedback/reputation system is visible.' },
+      { problemId:'retail105', title:'Smart Campus Navigation Web App', desc:'Interactive web app with maps, event updates, and real-time facility details for students and visitors.', expectedOutcome:'Interactive campus map prototype with search, location highlights, and event updates.' }
+    ]
+  },
+  {
+    id: 'iot',
+    title: 'IoT & Smart Systems',
+    problems: [
+      { problemId:'iot101', title:'Smart Waste Management System', desc:'IoT bins with sensors sending alerts and dashboards to optimize collection routes.', expectedOutcome:'IoT prototype simulating bin fill levels, sending alerts, and optimizing collection routes.' },
+      { problemId:'iot102', title:'Smart Irrigation for Farmers', desc:'IoT-based soil moisture sensors linked with pumps for automated water usage optimization.', expectedOutcome:'IoT demo automating irrigation based on soil data with water usage statistics.' },
+      { problemId:'iot103', title:'Home Automation for Energy Saving', desc:'IoT devices for monitoring electricity usage and remotely controlling appliances.', expectedOutcome:'Prototype system controlling appliances via app and displaying energy usage reports.' },
+      { problemId:'iot104', title:'Vehicle Tracking and Safety System', desc:'IoT device with GPS and accelerometer to send crash and location alerts instantly.', expectedOutcome:'Demo device/app showing vehicle tracking with crash alert simulation sent to emergency contacts.' },
+      { problemId:'iot105', title:'Smart Health Monitoring for Patients', desc:'Wearable IoT band measuring vitals and sending health data wirelessly to apps.', expectedOutcome:'Prototype wearable data simulation with vitals dashboard and real-time monitoring features.' }
+    ]
+  },
+  {
+  id: 'msme',
+  title: 'MSME & Startup Solutions',
+  problems: [
+    { 
+      problemId: 'msme101', 
+      title: 'Automated GST & Compliance Reconciliation Kit', 
+      desc: 'MSMEs face penalties due to mismatches in invoices, GST returns, and e-waybills. Manual reconciliation is error-prone and time-consuming. Build an intelligent reconciliation platform to automate this process.', 
+      expectedOutcome: 'AI-powered platform that auto-imports invoices, reconciles GST data, flags mismatches with corrective suggestions, and prepares GSTR draft reports ready for filing.' 
+    },
+    { 
+      problemId: 'msme102', 
+      title: 'Cashflow Predictor + Invoice Financing Connector', 
+      desc: 'Small firms struggle to manage liquidity and miss financing opportunities due to poor cashflow visibility. Build a platform that forecasts cashflows and connects MSMEs with lenders/fintech APIs.', 
+      expectedOutcome: 'System providing 1–12 month cashflow forecasts, liquidity risk scores, lender-ready financial docs, and API integration with financing partners.' 
+    },
+    { 
+      problemId: 'msme103', 
+      title: 'Shop-floor Asset Utilization & Predictive Maintenance Suite', 
+      desc: 'MSME manufacturers lose productivity due to machine downtime. Build a low-cost IoT + software system to track usage, detect anomalies, and predict maintenance needs.', 
+      expectedOutcome: 'Real-time dashboard for machine utilization, downtime categorization, predictive maintenance alerts, and OEE reports.' 
+    },
+    { 
+      problemId: 'msme104', 
+      title: 'Localized E-Marketplace Kit for Micro Manufacturers', 
+      desc: 'Small manufacturers need affordable online presence with language support, delivery integration, and offline order management. Build a marketplace toolkit for MSMEs.', 
+      expectedOutcome: 'Toolkit for multi-language stores, logistics integration, offline order entry, and analytics with SMS/WhatsApp marketing features.' 
+    },
+    { 
+      problemId: 'msme105', 
+      title: 'Procurement & Supplier Risk Monitor', 
+      desc: 'MSMEs face supply delays and poor quality due to lack of supplier performance tracking. Build a tool that monitors supplier risk, ranks vendors, and provides early warnings.', 
+      expectedOutcome: 'Supplier scorecards, risk detection (dependency/volatility), alternate supplier suggestions, and audit-ready reports.' 
+    }
+  ]
+}
+
+];
+
+    // render domain cards
+    const domainsGrid = document.querySelector('#domains .grid') || document.querySelector('#domains > div.grid');
+    const container = document.querySelector('#domains > .grid') || document.querySelector('#domains .grid') || document.querySelector('#domains');
+
+    // fallback: find the first grid inside #domains
+    const grid = document.querySelector('#domains .grid') || (function(){
+      const g = document.createElement('div');
+      g.className = 'grid sm:grid-cols-2 lg:grid-cols-3 gap-6';
+      document.querySelector('#domains').appendChild(g);
+      return g;
+    })();
+
+    data.forEach((d, i) => {
+  const card = document.createElement('button');
+  card.className = 'domain-card reveal glass p-6 rounded-xl text-left transform transition shadow-sm';
+
+  card.innerHTML = `
+    <div class="flex items-start gap-4">
+      <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-indigo-600 to-cyan-400 text-white font-bold">
+        ${d.title.split(/\s/).map(s => s[0]).slice(0, 2).join('')}
+      </div>
+      <div class="flex-1">
+        <h4 class="font-semibold text-lg">${d.title}</h4>
+        <div class="mt-3 text-xs text-slate-400">Eligibility: 3<sup>rd</sup> & 4<sup>th</sup> year students</div>
+      </div>
+    </div>
+  `;
+
+  card.onclick = () => openModal(d);
+  grid.appendChild(card);
+});
+
+
+    // reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) e.target.classList.add('show');
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Show Registration Modal
+function openRegisterModal(){
+  const modal = document.getElementById('register-modal');
+  modal.classList.remove('hidden');
+  modal.style.display = 'flex';
+}
+// Open Problem Modal
+function openModal(domain){
+  const modal = document.getElementById('modal');
+  const modalContent = document.getElementById('modal-content');
+
+  // Build problem list for this domain
+  modalContent.innerHTML = `
+    <h3 class="text-xl font-bold mb-4">${domain.title}</h3>
+    <div class="space-y-4">
+      ${domain.problems.map(p => `
+        <div class="glass p-4 rounded-lg border border-white/10">
+         <h4 class="font-semibold">
+            <span class="text-red-500">${p.problemId}</span> – ${p.title}
+          </h4>
+          <p class="text-sm text-slate-300 mt-1">${p.desc}</p>
+          <p class="text-xs text-green-400 mt-2"><strong>Expected Outcome:</strong> ${p.expectedOutcome}</p>
+          <button onclick="copyTitle('${p.title.replace(/'/g,"\\'")}')" 
+                  class="mt-2 px-3 py-1 text-xs rounded-md bg-indigo-500 hover:bg-indigo-600">
+            Copy Title
+          </button>
+        </div>
+      `).join('')}
+    </div>
+  `;
+
+  modal.classList.remove('hidden');
+  modal.style.display = 'flex';
+}
+
+// Close Problem Modal
+function closeModal(){
+  const modal = document.getElementById('modal');
+  modal.classList.add('hidden');
+  modal.style.display = 'none';
+}
+
+
+// Close Registration Modal
+function closeRegisterModal(){
+  const modal = document.getElementById('register-modal');
+  modal.classList.add('hidden');
+  modal.style.display = 'none';
+}
+
+// Attach to all Register buttons
+document.querySelectorAll('a[href="#register"]').forEach(btn=>{
+  btn.addEventListener('click', (ev)=>{
+    ev.preventDefault();
+    openRegisterModal();
+  });
+});
+
+    function copyTitle(title){
+      navigator.clipboard?.writeText(title).then(()=> {
+        alert('Problem title copied to clipboard.');
+      }).catch(()=> alert('Could not copy — permission denied.'));
+    }
+
+    // simple escape to avoid innerHTML issues
+    function escapeHtml(s){
+      return s.replaceAll("'", "\\'").replaceAll('"','\\"');
+    }
+
+    // Quick form submission (demo only)
+    document.getElementById('quickForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const form = new FormData(e.target);
+      const payload = Object.fromEntries(form.entries());
+      // For demo: just show a success toast
+      alert('Registration saved (demo). Use embedded Google Form or your backend for real registrations.');
+      e.target.reset();
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (ev)=>{
+        ev.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+
+    // small accessibility: close modal with Escape
+    window.addEventListener('keydown', (e)=> {
+      if(e.key === 'Escape') closeModal();
+    });
+
+  </script>
+</body>
+</html>
